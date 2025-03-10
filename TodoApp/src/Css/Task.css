@@ -1,0 +1,131 @@
+.task-container{
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 500px;
+  padding: 10px;
+}
+
+.task
+{
+  height: 50px;
+  width: 300px;
+  border: 1px solid #8c0202;
+  display: flex;
+  background: #000;
+  margin-right: 0;
+  border-radius: 10px;
+}
+.taskText{
+  font-size: 25px;
+  font-weight: inherit;
+  font-family: SimSun;
+  text-align: center;
+  justify-content: center;
+  color: aliceblue;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.editButton{
+  opacity: 0 ;
+  display: inline-block;
+  background: #2c63e6;
+  height: 50px;
+  width: 60px;
+  cursor: pointer;
+  transform: translateX(60px);
+}
+
+.deleteButton{
+  opacity: 0 ;
+  background: #cf2525;
+  height: 50px;
+  width: 60px;
+  cursor: pointer;
+  transform: translateX(-60px);
+}
+
+.task-container:hover .editButton {
+  animation: hoverEditButton 0.3s forwards;
+}
+
+.task-container:hover .deleteButton {
+  animation: hoverDeleteButton 0.5s forwards;
+}
+
+
+.task-container .editButton {
+  animation: closeEditButton 0.3s forwards;
+}
+
+.task-container .deleteButton {
+  animation: closeDeleteButton 0.3s forwards;
+}
+
+@keyframes hoverEditButton {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateX(45px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(30px);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes hoverDeleteButton {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+
+}
+
+@keyframes closeEditButton {
+  0% {
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+}
+
+@keyframes closeDeleteButton {
+  0% {
+    opacity: 1;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+}
