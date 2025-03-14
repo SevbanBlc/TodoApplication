@@ -1,0 +1,18 @@
+
+input{
+  padding: 10px;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  outline: none;
+  border-radius: 20px;
+}
+
+button{
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: gold;
+  font-weight: 700;
+}
