@@ -13,7 +13,7 @@ function App() {
   }
 
   const removeTodo = (todoId) =>{
-   setTodos(...todos.filter((todo) => todo.id !== todoId))
+   setTodos(todos.filter((todo) => todo.id !== todoId))
   }
 
   const updateTodo = (newTodo) =>{
